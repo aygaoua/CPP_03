@@ -6,13 +6,13 @@
 #    By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 14:20:58 by azgaoua           #+#    #+#              #
-#    Updated: 2024/02/02 15:06:22 by azgaoua          ###   ########.fr        #
+#    Updated: 2024/02/02 17:33:07 by azgaoua          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = run_ex00
 
-OBJS = Fixed.o main.o
+OBJS = ClapTrap.o main.o
 
 FILES = ClapTrap.cpp main.cpp
 
