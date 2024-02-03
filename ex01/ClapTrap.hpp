@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:20:34 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/02/02 15:54:40 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/02/03 16:47:06 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 
 class ClapTrap {
-	private:
+	protected:
 		std::string 		_Name;
 		unsigned int		_Hit_points;
 		unsigned int		_Energy_points;
@@ -31,7 +31,9 @@ class ClapTrap {
 		~ClapTrap		();
 	/*-----------------------------------------------------------------------*/
 
+	/*----------------------  constructor  ----------------------*/
 		ClapTrap(std::string Name);
+	/*-----------------------------------------------------------*/
 
 	/*----------------------  public member functions  ----------------------*/
 		void attack(const std::string& target);

@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 19:32:00 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/02/02 20:29:06 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/02/03 16:46:07 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,6 @@
 #include <string>
 
 class ScavTrap : public ClapTrap {
-	private:
-		std::string 		_Name;
-		unsigned int		_Hit_points;
-		unsigned int		_Energy_points;
-		unsigned int		_Attack_damage;
-
 	public :
 	/*----------------------  Orthodox Canonical Form  ----------------------*/
 		ScavTrap		();
@@ -30,9 +24,18 @@ class ScavTrap : public ClapTrap {
 		ScavTrap&		operator =(const ScavTrap& b);
 		~ScavTrap		();
 	/*-----------------------------------------------------------------------*/
+
+	/*----------------------  constructor  ----------------------*/
 		ScavTrap		(std::string Name);
+	/*-----------------------------------------------------------*/
+
+	/*----------------------  ScavTrap functions  ----------------------*/
 		void 			guardGate();
-		void attack(const std::string& target);
+	/*-----------------------------------------------------------------------*/
+
+	/*----------------------  public member functions  ----------------------*/
+		void 			attack(const std::string& target);
+	/*-----------------------------------------------------------------------*/
 };
 
 #endif
