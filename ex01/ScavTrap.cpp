@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 19:32:12 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/02/03 16:56:49 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/02/03 19:11:55 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ ScavTrap&		ScavTrap::operator =(const ScavTrap& b) {
 }
 
 ScavTrap::ScavTrap(ScavTrap const &src) {
-	_Hit_points = 100;
-	_Energy_points = 50;
-	_Attack_damage = 20;
 	std::cout << "the ScavTrap Copy constructor called" << std::endl;
 	*this = src;
 }
@@ -56,15 +53,15 @@ void ScavTrap::attack(const std::string& target) {
 
 /*----------------------  constructor  ----------------------*/
 ScavTrap::ScavTrap(std::string Name) {
+	_Name = Name;
 	_Hit_points = 100;
 	_Energy_points = 50;
 	_Attack_damage = 20;
-	_Name = Name;
 }
 /*-----------------------------------------------------------*/
 
 /*----------------------  ScavTrap functions  ----------------------*/
 void 			ScavTrap::guardGate() {
-	std::cout << _Name << " is now in Gatekeeper mode" << std::endl; 
+	std::cout << "The ScavTrap " << _Name << " is now in Gatekeeper mode" << std::endl; 
 }
 /*------------------------------------------------------------------*/

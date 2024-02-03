@@ -6,28 +6,31 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:28:12 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/02/03 18:22:58 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/02/03 19:18:32 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 int main() {
+	std::string name("Aymane");
+	std::string target("salmane");
+
 	std::cout << "<<------------------- ClapTrap ------------------->>" << std::endl;
-	ClapTrap a(std::string("Aymane"));
+	ClapTrap a(name);
 	
-	a.attack(std::string("salmane"));
+	a.attack(target);
 	a.takeDamage(5);
 	a.beRepaired(5);
 
 	std::cout << "<<------------------- ScavTrap ------------------->>" << std::endl;
-	ScavTrap b(std::string("Aymane"));
+	ScavTrap b(name);
 
-	b.attack(std::string("salmane"));
+	b.attack(target);
 	b.takeDamage(500);
-	b.attack(std::string("salmane"));
+	b.attack(target);
 	b.guardGate();
-	b.attack(std::string("salmane"));
+	b.attack(target);
 	b.beRepaired(101);
 	b.guardGate();
 	std::cout << "<<------------------- End ------------------->>" << std::endl;
