@@ -6,15 +6,15 @@
 #    By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 14:20:58 by azgaoua           #+#    #+#              #
-#    Updated: 2024/02/02 19:31:54 by azgaoua          ###   ########.fr        #
+#    Updated: 2024/02/03 18:57:50 by azgaoua          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = run_ex01
+NAME = run_ex02
 
-OBJS = ScavTrap.o ClapTrap.o main.o
+OBJS =  FragTrap.o ScavTrap.o ClapTrap.o main.o
 
-FILES = ScavTrap.cpp ClapTrap.cpp main.cpp
+FILES =  FragTrap.cpp ScavTrap.cpp ClapTrap.cpp main.cpp
 
 CXX = c++
 
@@ -24,13 +24,13 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all :  $(NAME)
 
-%.o: %.cpp ClapTrap.hpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME) :  $(OBJS) $(FILES)
-	@echo "------>making the ex01<------"
+	@echo "------>making the ex02<------"
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
-	@echo "--------->ex01 Done<---------"
+	@echo "--------->ex02 Done<---------"
 
 clean:
 	@echo " remove $(OBJS)"
