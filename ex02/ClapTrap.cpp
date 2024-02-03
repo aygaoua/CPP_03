@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:20:21 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/02/03 20:19:59 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/02/03 20:47:46 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,15 @@ void ClapTrap::attack(const std::string& target) {
 	if (_Hit_points > 0 && _Energy_points > 0) {
 		_Energy_points--;
 		std::cout << "ClapTrap " << _Name << " attacks " << target << \
-						", causing " << _Attack_damage << " points of damage!"<< std::endl;
+						", causing " << _Attack_damage << \
+						" points of damage!"<< std::endl;
 	}
-	else if (_Hit_points == 0)
-		std::cout << "ClapTrap " << _Name << " have zero Hit points" << std::endl;
+	else if (_Hit_points == 0 && _Energy_points == 0)
+		std::cout << "ClapTrap " << _Name << " have zero Energy points and zero Hit points" << std::endl;
 	else if (_Energy_points == 0)
 		std::cout << "ClapTrap " << _Name << " have zero Energy points" << std::endl;
 	else
-		std::cout << "ClapTrap " << _Name << \
-						" have zero Energy points and zero Hit points" << std::endl;
+		std::cout << "ClapTrap " << _Name << " have zero Hit points" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {

@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:28:12 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/02/03 19:18:59 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/02/03 21:08:24 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,22 @@ int main() {
 	ScavTrap b(name);
 
 	b.attack(target);
-	b.takeDamage(500);
+	b.takeDamage(10);
 	b.attack(target);
 	b.guardGate();
 	b.attack(target);
-	b.beRepaired(101);
+	b.beRepaired(5);
 	b.guardGate();
 
 	std::cout << "<<------------------- FragTrap ------------------->>" << std::endl;
 	FragTrap c(name);
 	
 	c.attack(target);
-	c.takeDamage(500);
+	c.takeDamage(10);
 	c.attack(target);
 	c.highFivesGuys();
 	c.attack(target);
-	c.beRepaired(101);
+	c.beRepaired(5);
 	c.highFivesGuys();
 	std::cout << "<<------------------- End ------------------->>" << std::endl;
 

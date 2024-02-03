@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 18:29:57 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/02/03 20:22:35 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/02/03 21:07:43 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,12 @@ void FragTrap::attack(const std::string& target) {
 						", causing " << _Attack_damage << \
 						" points of damage!"<< std::endl;
 	}
-	else if (_Hit_points == 0)
-		std::cout << "FragTrap " << _Name << " have zero Hit points" << std::endl;
+	else if (_Hit_points == 0 && _Energy_points == 0)
+		std::cout << "FragTrap " << _Name << " have zero Energy points and zero Hit points" << std::endl;
 	else if (_Energy_points == 0)
 		std::cout << "FragTrap " << _Name << " have zero Energy points" << std::endl;
 	else
-		std::cout << "FragTrap " << _Name << \
-						" have zero Energy points and zero Hit points" << std::endl;
+		std::cout << "FragTrap " << _Name << " have zero Hit points" << std::endl;
 }
 /*-----------------------------------------------------------------------*/
 
@@ -70,9 +69,8 @@ FragTrap::FragTrap(std::string Name) {
 
 
 /*---------------------------  FragTrap functions  ---------------------------*/
-
 void 			FragTrap::highFivesGuys() {
-	std::cout << "High fives from the FragTrap " << _Name << " to all the Guys :)" << std::endl;
+	std::cout << "High fives from the FragTrap " << _Name << \
+					" to all the Guys :)" << std::endl;
 }
-
 /*----------------------------------------------------------------------------*/
