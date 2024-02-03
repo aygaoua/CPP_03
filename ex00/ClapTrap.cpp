@@ -6,7 +6,7 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 14:20:21 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/02/03 20:46:14 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/02/03 21:22:21 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ ClapTrap&		ClapTrap::operator =(const ClapTrap& b) {
 	_Hit_points = b._Hit_points;
 	_Energy_points = b._Energy_points;
 	_Attack_damage = b._Attack_damage;
+	std::cout << "Copy assignment operator called" << std::endl;
 	return(*this);
 }
 
