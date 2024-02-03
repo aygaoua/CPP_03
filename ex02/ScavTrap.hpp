@@ -6,13 +6,15 @@
 /*   By: azgaoua <azgaoua@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 19:32:00 by azgaoua           #+#    #+#             */
-/*   Updated: 2024/02/03 16:46:07 by azgaoua          ###   ########.fr       */
+/*   Updated: 2024/02/03 19:05:42 by azgaoua          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
+
+
+#include "ClapTrap.hpp"
 #include <iostream>
 #include <string>
 
